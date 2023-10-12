@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-color: beige;
+        overflow-x: none;
+        overflow-y: none;
+    }
+
+    h1 {
+        margin-top: 50px;
+        font-weight: bold;
+        font-style: italic;
+        cursor: pointer;
+        color: red;
+        font-size: 60px;
+
+    }
+
+    h1:hover {
+        color: skyblue;
+    }
+
+    center {
+        height: 600px;
+        margin: 150px 450px;
+        padding: 20px;
+        background-color: orange;
+        box-shadow: 10px 15px 10px black;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background-image: url(image/image\ 5.jpg);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    input {
+        width: 30%;
+        height: 50px;
+        margin-top: 30px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 300px;
+        padding: 7px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border: none;
+        background-color: orangered;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+
+    div {
+        color: black;
+        width: 15%;
+        height: 80px;
+        background-color: whitesmoke;
+        margin-top: 20px;
+        padding-top: 25px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        center {
+            height: 630px;
+            margin: 20px 450px;
+            padding: 20px;
+            background-color: orange;
+            box-shadow: 10px 15px 10px black;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            background-image: url(image/image\ 5.jpg);
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        input {
+            width: 80%;
+            height: 60px;
+            margin-top: 30px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 200px;
+            padding: 7px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border: none;
+            background-color: orangered;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+
+        div {
+            color: blue;
+            width: 50%;
+            height: 80px;
+            background-color: whitesmoke;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 20px;
+        }
+    }
+</style>
+
+<body>
+    <center class="container-fluid container-md container-sm w-75 ">
+        <hr class="first-hr">
+        <h1>Grading System</h1>
+        <input type="number" placeholder="Enter your score" id="userinput"><br><br>
+        <button onclick="display()"><span></span>click</button>
+        <div id="result" class="shadow-lg"></div>
+        <hr class="second-hr">
+        <footer></footer>
+    </center>
+    <script>
+        // logical operation
+        // OR AND NOT-equald
+        var song = ""
+        var asakeSong = new Audio(song)
+        asakeSong.play()
+
+        function display() {
+            var inp = userinput.value
+            if (inp == "") {
+                console.log(inp + " Not found");
+                result.innerHTML = "Not found"
+            }
+
+            else if (inp >= 0 && inp < 40) {
+                console.log(inp + "is F");
+                result.innerHTML = "Fail 😇"
+            }
+
+            else if (inp >= 40 && inp < 45) {
+                console.log(inp + "is E");
+                result.innerHTML = "Pass 😕"
+            }
+
+            else if (inp >= 45 && inp < 50) {
+                console.log(inp + "is D");
+                result.innerHTML = "Average 😒"
+            }
+
+            else if (inp >= 50 && inp < 60) {
+                console.log(inp + "is C");
+                result.innerHTML = "Credit 🫣"
+            }
+
+            else if (inp >= 60 && inp < 70) {
+                console.log(inp + "is B");
+                result.innerHTML = "Good 👍"
+            }
+
+            else if (inp >= 70 && inp <= 100) {
+                console.log(inp + "is A");
+                result.innerHTML = "Excellent 😄"
+            }
+
+            else if (inp >= 101) {
+                console.log(inp + "Invalid score");
+                result.innerHTML = "Invalid Score"
+            }
+        }
+    </script>
+</body>
+
+</html>
